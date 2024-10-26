@@ -1,0 +1,37 @@
+.middle {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0 20%;
+    height: 30rem;
+    align-items: center;
+}
+
+.middleInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.middleHeader {
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.middleParagraph {
+    font-size: 1.2rem;
+    padding-right: 4rem;
+}
+
+.phrase {
+    display: flex;
+    padding: .8rem 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUsPhoto {
+    height: 15rem;
+    width: auto;
+}

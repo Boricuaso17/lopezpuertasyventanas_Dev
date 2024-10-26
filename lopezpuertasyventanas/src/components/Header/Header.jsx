@@ -35,13 +35,13 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className={styles.menuLinks} to="/quotes">
-              SOLICITUD DE COTIZACIÓN
+            <Link className={styles.menuLinks} to="/gallery">
+              GALERÍA
             </Link>
           </li>
           <li>
-            <Link className={styles.menuLinks} to="/gallery">
-              GALERÍA
+            <Link className={styles.menuLinks} to="/quotes">
+              SOLICITUD DE COTIZACIÓN
             </Link>
           </li>
         </ul>

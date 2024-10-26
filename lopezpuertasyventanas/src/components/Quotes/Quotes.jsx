@@ -1,15 +1,23 @@
 import React from "react";
 import { Header }  from '../Header/Header'
 import { Footer } from "../Footer/Footer";
-import styles from '../../static/styles.module.css'; // For CSS Modules
+import styles from '../Quotes/Quotes.module.css'; // For CSS Modules
 
 const Qoutes = () => {
 
     return (
         <>
         <Header />
-        <div >
-            <form method="post" action="./send_email.php">
+<h2>Lopez Puertas y Ventanas</h2>
+<hr />
+        <p >Rio Grande</p>
+        <p >Teléfono</p>
+        <p >Dirección</p>
+
+        <hr />
+        <div className={styles.middle} >
+            
+            <form method="post" action="./send_email.php" className={styles.form}>
                 <label for="name">Nombre:</label>
                 <input className={styles.quotesInput} type="text" name="name" id="name" required />
 
@@ -23,9 +31,9 @@ const Qoutes = () => {
                 <input className={styles.quotesInput} type="email" name="email" id="email" required />
 
                 <label for="message">Mensaje / Comentarios:</label>
-                <textarea className={styles.quotesInput} name="message" id="message" required></textarea>
+                <textarea className={styles.quotesTextarea} name="message" id="message"></textarea>
 
-                <button type="submit">Someter</button>
+                <button type="submit" >Someter</button>
             </form>
         </div>
         <Footer />

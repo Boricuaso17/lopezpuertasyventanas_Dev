@@ -1,0 +1,15 @@
+.middle {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 35rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #103a83;
+}
+
+li {
+    color: rgb(95, 95, 95);
+}

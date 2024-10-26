@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Set the recipient email address
-    $to = "lopezpuertaventas94@outlook.com";
+    $to = "joshuamercadorivera@yahoo.com"; /* lopezpuertaventas94@outlook.com */
 
     // Create the email subject and body
     $subject = "Solicitud de Cotización de " . $name;
