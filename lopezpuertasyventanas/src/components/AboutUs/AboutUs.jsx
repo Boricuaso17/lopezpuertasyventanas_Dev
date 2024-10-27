@@ -10,7 +10,7 @@ const AboutUs = () => {
       <Header />
       <div className={styles.middle}>
         <div className={styles.middleInfo}>
-          <h2 className={styles.middleHeader}> Quienes Somos</h2>
+          <h2 className={styles.middleTitle}> Quienes Somos</h2>
           <p className={styles.middleParagraph}>
             Lopez Puertas y Ventanas es una compañía puertorriqueña comprometida
             con nuestros clientes, ofreciendo productos de calidad y un servicio

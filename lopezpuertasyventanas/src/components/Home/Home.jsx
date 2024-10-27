@@ -1,27 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-import styles from "./Home.module.css"; // For CSS Modules
-import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
-import { Link } from "react-router-dom"; // Use React Router's Link component
+import styles from "./Home.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(1);
+  const [prevImageIndex, setPrevImageIndex] = useState(null);
 
-  const carouselPhotos = (sign) => {
-    
-    switch (sign) {
-      case "+":
-        setCurrentImageIndex(currentImageIndex + 1);
-        console.log(currentImageIndex);
-        break;
+  const carouselPhotos = (direction) => {
+    setPrevImageIndex(currentImageIndex);
 
-      case "-":
-        setCurrentImageIndex(currentImageIndex - 1);
-        console.log(currentImageIndex);
-        break;
+    if (direction === "+") {
+      setCurrentImageIndex((currentImageIndex % 6) + 1);
+    } else if (direction === "-") {
+      setCurrentImageIndex((currentImageIndex - 2 + 6) % 6 + 1);
     }
   };
+
+  useEffect(() => {
+    if (prevImageIndex !== null) {
+      const timer = setTimeout(() => {
+        setPrevImageIndex(null);
+      }, 1000); // Match this duration with your CSS transition duration
+
+      return () => clearTimeout(timer);
+    }
+  }, [currentImageIndex]);
 
   return (
     <>
@@ -33,18 +39,23 @@ const Home = () => {
         >
           <div className={`carousel-inner ${styles.homeCarouselInner}`}>
             <div className={`carousel-item active ${styles.homeCarouselItem}`}>
+              {prevImageIndex && (
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/homePage/homePhoto${prevImageIndex}.jpg`}
+                  className={`${styles.homeSlidesShow} ${styles.fadeOut}`}
+                  alt="Previous Slide"
+                />
+              )}
               <img
                 src={`${process.env.PUBLIC_URL}/images/homePage/homePhoto${currentImageIndex}.jpg`}
-                className={styles.homeSlidesShow}
-                alt="..."
+                className={`${styles.homeSlidesShow} ${styles.fadeIn}`}
+                alt="Current Slide"
               />
             </div>
           </div>
           <button
             className="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev"
             onClick={() => {
               carouselPhotos("-");
             }}
@@ -58,8 +69,6 @@ const Home = () => {
           <button
             className="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="next"
             onClick={() => {
               carouselPhotos("+");
             }}
@@ -73,35 +82,53 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Rest of your component remains the same */}
       <div className={styles.middle2}>
-        <h2>INSTALACIONES A TODA LA ISLA</h2>
-        <ul>
-          <li>
-            <h3>Puertas de seguridad en aluminio</h3>
-          </li>
-          <li>
-            <h3>Ventanas de seguridad en aluminio</h3>
-          </li>
-          <li>
-            <h3>Puertas de Garaje</h3>
-          </li>
-          <li>
-            <h3>Puertas de Closet</h3>
-          </li>
-          <li>
-            <h3>Screens</h3>
-          </li>
-          <li>
-            <h3>Puertas para Terrazas</h3>
-          </li>
-        </ul>
+        <div className={styles.services}>
+          <h2 className={styles.servicesTitle}>INSTALACIONES A TODA LA ISLA</h2>
+          <ul>
+            <li>
+              <h5>Puertas de seguridad en aluminio</h5>
+            </li>
+            <li>
+              <h5>Ventanas de seguridad en aluminio</h5>
+            </li>
+            <li>
+              <h5>Puertas de Garaje</h5>
+            </li>
+            <li>
+              <h5>Puertas de Closet</h5>
+            </li>
+            <li>
+              <h5>Screens</h5>
+            </li>
+            <li>
+              <h5>Puertas para Terrazas</h5>
+            </li>
+          </ul>
 
-        <Link to="products" className={styles.productsLink}>
-          Ver Productos y Servicios
-        </Link>
+          <Link to="products" className={styles.productsLink}>
+            Ver Productos y Servicios
+          </Link>
+        </div>
+
+        <div className={styles.mapContainer}>
+        <iframe 
+            className={styles.map}
+                src="https://www.google.com/maps?q=18.377966,-65.865464&z=15&output=embed"
+                style={{ border: 0 }}  // Corrected inline style
+                allowFullScreen="" 
+                loading="lazy">
+            </iframe>            
+        </div>
       </div>
-
-      {/* Uncomment Footer when needed */}
+      
+      <div className={styles.middle3}>
+              <div className={styles.items}>Ventanas</div>
+              <div className={styles.items}>Puertas</div>
+              <div className={styles.items}>Puertas de Closet</div>
+              <div className={styles.items}>Puertas de Garaje</div>
+        </div>
       <Footer />
     </>
   );

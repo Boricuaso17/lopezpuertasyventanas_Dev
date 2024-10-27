@@ -13,7 +13,8 @@
     justify-content: center;
 }
 
-.middleHeader {
+.middleTitle{
+    color: #103a83;
     font-size: 3.5rem;
     font-weight: 700;
     padding-bottom: 1rem;

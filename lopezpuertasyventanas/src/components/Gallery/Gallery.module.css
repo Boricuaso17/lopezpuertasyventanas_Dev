@@ -1,0 +1,43 @@
+.middle {
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 40rem; /* Fixed height for the middle section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.carousel {
+    width: auto; /* Carousel takes up 90% of the container */
+    height: 100%; /* Carousel will fill the height of its parent (.middle) */
+}
+
+.carouselInner {
+    width: 100%;
+    height: 100%; /* Make sure the inner carousel also takes the full height */
+}
+
+.carouselItem {
+    background: #103a83;
+    height: 100%; /* Carousel item should take up the full height of the carousel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slidesShow {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Stretches the image to cover both width and height, but may distort the image */
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

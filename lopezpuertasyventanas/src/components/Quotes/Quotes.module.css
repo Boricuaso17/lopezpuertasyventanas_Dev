@@ -1,9 +1,29 @@
+.title {
+    color: #103a83;
+}
+
+
 .middle {
-    height: 40rem;
-    padding: 1rem 20%;
+    height: 50rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;  
+}
+
+.info {
+    padding: 2rem 0 ;
+    width: 40%;
+}
+
+.city {
+    color: #253c7f;
+    font-weight: 700;
+}
+
+.line {
+    display: flex;
 }
 
 .form {
@@ -14,13 +34,25 @@
 }
 
 .quotesInput {
-    width: 20rem;
-    height: 2rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    width: 30rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: .5rem 0 1rem 0;
 }
 
 .quotesTextarea {
-    width: 20rem;
+    width: 100%;
+    height: 6rem;
+    border-radius: 10px;
+}
+
+.btn {
+    margin-top: 1rem;
+    background: #103a83;
+    color: white;
+    border: none;
     border-radius: 8px;
+    width: 100%;
+    height: 2.2rem;
 }

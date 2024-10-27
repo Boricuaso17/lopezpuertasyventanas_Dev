@@ -8,8 +8,10 @@
 
 .title {
     color: #103a83;
+    font-size: 2.7rem;
+    font-weight: 600;
 }
 
-li {
+.description {
     color: rgb(95, 95, 95);
 }

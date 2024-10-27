@@ -29,20 +29,72 @@
 .homeSlidesShow {
     width: 100%;
     height: 100%;
-    object-fit: fill; /* Stretches the image to cover both width and height, but may distort the image */
-}
+    object-fit: cover;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
 
 .middle2 {
-    background: #5e5e5e;
-    height: 25rem;
+    background: #7b7b7b;
+    height: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+   
+}
+
+.map {
+    width: 28rem;
+    height: 24rem;
+    border-radius: 15px;
+    left: 8rem;
+}
+
+.mapContainer {
+    display: flex;
+}
+
+.services {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 10rem;
+}
+
+.servicesTitle {
+    color: #103a83;
+    font-weight: 600; 
 }
 
 .productsLink {
     text-decoration: none;
     font-size: 1.2rem;
     color:black;
+}
+
+.middle3 {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    height: 10rem;
+    width: 10rem;
 }

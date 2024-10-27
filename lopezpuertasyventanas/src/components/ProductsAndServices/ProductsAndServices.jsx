@@ -9,7 +9,7 @@ const ProductsAndServices = () => {
       <Header />
       <div className={styles.middle}>
         <div>
-          <ul>
+          <ul className={styles.description}>
             <h2 className={styles.title}>Ventanas</h2>
             <li>Seguridad</li>
             <li>
@@ -22,11 +22,11 @@ const ProductsAndServices = () => {
               Lama 6 cristal o aluminio (cristal varios colores a escoger)
             </li>
             <li>Ventanas Casement</li>
-            <li> Ventanas Proyected</li>
+            <li>Ventanas Proyected</li>
           </ul>
         </div>
         <div>
-          <ul>
+          <ul className={styles.description}>
             <h2 className={styles.title}>Puertas</h2>
             <li>Puertas Aluminio Heavy</li>
             <li>Puertas Aluminio Full Glass</li>
@@ -36,7 +36,7 @@ const ProductsAndServices = () => {
           </ul>
         </div>
         <div>
-          <ul>
+          <ul className={styles.description}>
             <h2 className={styles.title}>Puertas de Closet</h2>
             <li>Espejo</li>
             <li>Cristal Op' White</li>
@@ -44,7 +44,7 @@ const ProductsAndServices = () => {
           </ul>
         </div>
         <div>
-          <ul>
+          <ul className={styles.description}>
             <h2 className={styles.title}>Puertas de Garaje</h2>
             <li>Puertas de Garaje en cristales</li>
             <li>Puertas de Garaje con perforados o combinación de ambos</li>
