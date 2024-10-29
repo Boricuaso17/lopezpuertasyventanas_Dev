@@ -36,3 +36,17 @@
     height: 15rem;
     width: auto;
 }
+
+@media only screen and (max-width: 768px) {
+    
+    .middle {
+        grid-template-columns: auto; /* Change to a single column */
+        padding: 5% 5%; /* Adjust padding if necessary */
+        width: 100%; /* Ensure the grid takes up full width */
+        height: 80rem;
+    }
+
+    .aboutUsPhoto {
+        width: 100%;
+    }
+}

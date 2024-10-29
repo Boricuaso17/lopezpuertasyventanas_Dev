@@ -15,3 +15,18 @@
 .description {
     color: rgb(95, 95, 95);
 }
+
+@media only screen and (max-width: 768px) {
+    
+    .middle {
+        grid-template-columns: auto; /* Change to a single column */
+        width: 100%; /* Ensure the grid takes up full width */
+        height: 62rem;
+        grid-template-rows: 1fr;
+    }
+
+    .title {
+        padding: 5% 0;
+    }
+
+ }

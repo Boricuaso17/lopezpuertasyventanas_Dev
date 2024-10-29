@@ -46,40 +46,62 @@
 /* styles.module.css */
 .dropdownArrow :global(.dropdown-toggle::after) {
     display: none;
-  }
-  
-  @media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 768px) {
     .header {
-      height: 22dvh;
-      width: auto; /* Reduce header height on mobile */
-      justify-content: center; /* Center the logo */
+        height: 22dvh;
+        width: auto;
+        /* Reduce header height on mobile */
+        justify-content: center;
+        /* Center the logo */
     }
-  
+
     .logoLink {
-      margin-left: 0; /* Remove left margin */
-      width: 100%; /* Adjust logo size */
+        margin-left: 0;
+        /* Remove left margin */
+        width: 100%;
+        /* Adjust logo size */
     }
-  
+
     .menu {
-      height: auto; /* Allow menu to resize */
-      flex-direction: column; /* Stack menu vertically */
-      justify-content: start; /* Align to start */
-      padding: 0.5rem; /* Add padding for spacing */
+        height: auto;
+        /* Allow menu to resize */
+        flex-direction: column;
+        /* Stack menu vertically */
+        justify-content: start;
+        /* Align to start */
+        padding: 1rem 0 1rem 0.8rem ;
+        /* Add padding for spacing */
+        align-items: start;
     }
-  
+
+    /* .toggleBtn {
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    } */
+
     .menuItems {
-        flex-direction: column; /* Stack items vertically on mobile */
-        align-items: flex-start; /* Align to the left */
-        padding-left: 1rem; /* Ensure padding on mobile */
-        gap: 0.5rem; /* Adjust gap for smaller screens */
-      }
-  
+        flex-direction: column;
+        /* Stack items vertically on mobile */
+        align-items: flex-start;
+        /* Align to the left */
+        padding-left: 1rem;
+        /* Ensure padding on mobile */
+        gap: 0.5rem;
+        /* Adjust gap for smaller screens */
+    }
+
     .menuLinks {
-      font-size: 14pt; /* Adjust font size for mobile */
-      font-weight: 600; /* Slightly reduce weight */
+        font-size: 14pt;
+        /* Adjust font size for mobile */
+        font-weight: 600;
+        /* Slightly reduce weight */
     }
-  
+
     .dropdownArrow {
-      text-align: start; /* Center dropdown on mobile */
+        text-align: start;
+        /* Center dropdown on mobile */
     }
-  }
+}

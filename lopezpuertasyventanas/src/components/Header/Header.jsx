@@ -22,7 +22,7 @@ export const Header = () => {
 
       <div className={styles.menu}>
         <Navbar expand="lg"> {/* Add expand="lg" for responsiveness */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className={`me-auto ${styles.menuItems}`}>
               <LinkContainer to="/">

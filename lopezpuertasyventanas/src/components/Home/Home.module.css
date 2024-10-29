@@ -54,15 +54,15 @@
    
 }
 
+.mapContainer {
+    display: flex;
+}
+
 .map {
     width: 28rem;
     height: 24rem;
     border-radius: 15px;
     left: 8rem;
-}
-
-.mapContainer {
-    display: flex;
 }
 
 .services {
@@ -97,4 +97,41 @@
     background: red;
     height: 10rem;
     width: 10rem;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .middle {
+        height: 15rem;
+    }
+
+    .middle2 {
+        flex-direction: column;
+        height: 50rem;
+        gap:3rem;
+    }
+    .productsLink {
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .services {
+        width: 96%;
+    }
+    .mapContainer {
+        width: 90%;
+    }
+    
+    .middle3 {
+        flex-direction: column;
+        height: 80rem;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .items {
+        width: 90%;
+        height: 20rem;
+    }
 }
