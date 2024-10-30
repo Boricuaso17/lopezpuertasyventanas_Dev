@@ -82,6 +82,14 @@ const Home = () => {
         </div>
       </div>
 
+      <div className={styles.middle3}>
+      <div className={styles.items}><div className={styles.casa}></div><span>Ventanas</span></div>
+      <div className={styles.items}><div className={styles.casa}></div><span>Puertas</span></div>
+      <div className={styles.items}><div className={styles.casa}></div><span>Puertas de Closet</span></div>
+      <div className={styles.items}><div className={styles.casa}></div><span>Puertas de Garaje</span></div>
+
+        </div>
+
       {/* Rest of your component remains the same */}
       <div className={styles.middle2}>
         <div className={styles.services}>
@@ -123,12 +131,7 @@ const Home = () => {
         </div>
       </div>
       
-      <div className={styles.middle3}>
-              <div className={styles.items}>Ventanas</div>
-              <div className={styles.items}>Puertas</div>
-              <div className={styles.items}>Puertas de Closet</div>
-              <div className={styles.items}>Puertas de Garaje</div>
-        </div>
+      
       <Footer />
     </>
   );
