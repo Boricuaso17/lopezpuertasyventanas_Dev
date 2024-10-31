@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "joshuamercadorivera@yahoo.com"; /* lopezpuertaventas94@outlook.com */
 
     // Create the email subject and body
-    $subject = "Solicitud de Cotización de " . $name;
-    $body = "Nombre: " . $name . "\n";
+    $subject = "Solicitud de Cotización de " . $name . " " . $lname;
+    $body = "Nombre: " . $name . " " . $lname . "\n";
     $body .= "Teléfono: " . $phone . "\n";
     $body .= "Email: " . $email . "\n\n";
     $body .= "Mensaje / Comentarios:\n" . $message . "\n";
@@ -24,6 +24,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send the email
     if (mail($to, $subject, $body, $headers)) {
         echo "Message successfully sent!";
+        echo "<script>
+            setTimeout(function() {
+                window.location.href = '/';
+            }, 3000); // 2000 milliseconds = 2 seconds
+        </script>";
     } else {
         echo "Failed to send message.";
     }

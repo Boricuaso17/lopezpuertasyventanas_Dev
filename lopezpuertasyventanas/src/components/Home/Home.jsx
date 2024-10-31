@@ -15,7 +15,7 @@ const Home = () => {
     if (direction === "+") {
       setCurrentImageIndex((currentImageIndex % 6) + 1);
     } else if (direction === "-") {
-      setCurrentImageIndex((currentImageIndex - 2 + 6) % 6 + 1);
+      setCurrentImageIndex(((currentImageIndex - 2 + 6) % 6) + 1);
     }
   };
 
@@ -83,17 +83,28 @@ const Home = () => {
       </div>
 
       <div className={styles.middle3}>
-      <div className={styles.items}><div className={styles.casa}></div><span>Ventanas</span></div>
-      <div className={styles.items}><div className={styles.casa}></div><span>Puertas</span></div>
-      <div className={styles.items}><div className={styles.casa}></div><span>Puertas de Closet</span></div>
-      <div className={styles.items}><div className={styles.casa}></div><span>Puertas de Garaje</span></div>
-
+        <div className={styles.items}>
+          <div className={styles.casa}></div>
+          <span>Ventanas</span>
         </div>
+        <div className={styles.items}>
+          <div className={styles.casa}></div>
+          <span>Puertas</span>
+        </div>
+        <div className={styles.items}>
+          <div className={styles.casa}></div>
+          <span>Puertas de Closet</span>
+        </div>
+        <div className={styles.items}>
+          <div className={styles.casa}></div>
+          <span>Puertas de Garaje</span>
+        </div>
+      </div>
 
       {/* Rest of your component remains the same */}
       <div className={styles.middle2}>
         <div className={styles.services}>
-          <h2 className={styles.servicesTitle}>INSTALACIONES A TODA LA ISLA</h2>
+          <h2 className={styles.servicesTitle}>INSTALACIONES A TODA LA ISLA:</h2>
           <ul>
             <li>
               <h5>Puertas de seguridad en aluminio</h5>
@@ -121,17 +132,16 @@ const Home = () => {
         </div>
 
         <div className={styles.mapContainer}>
-        <iframe 
+          <iframe
             className={styles.map}
-                src="https://www.google.com/maps?q=18.377966,-65.865464&z=15&output=embed"
-                style={{ border: 0 }}  // Corrected inline style
-                allowFullScreen="" 
-                loading="lazy">
-            </iframe>            
+            src="https://www.google.com/maps?q=18.377722,-65.865833&z=15&output=embed"
+            style={{ border: 0 }} // Corrected inline style
+            allowFullScreen=""
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
-      
-      
+
       <Footer />
     </>
   );

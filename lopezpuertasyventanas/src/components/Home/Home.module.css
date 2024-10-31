@@ -44,7 +44,7 @@
   
 
 .middle2 {
-    background: #7b7b7b;
+    background: #9e9c9c;
     height: 30rem;
     display: flex;
     flex-direction: row;
@@ -68,6 +68,7 @@
 .services {
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 .servicesTitle {
@@ -78,7 +79,7 @@
 .productsLink {
     text-decoration: none;
     font-size: 1.2rem;
-    color:black;
+    color:#fff;
 }
 
 .middle3 {
@@ -137,7 +138,7 @@
 
     .middle2 {
         flex-direction: column;
-        height: 50rem;
+        height: 55rem;
         gap:3rem;
     }
     .productsLink {

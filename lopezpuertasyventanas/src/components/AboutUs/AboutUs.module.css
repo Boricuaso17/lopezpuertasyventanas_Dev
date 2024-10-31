@@ -43,7 +43,7 @@
         grid-template-columns: auto; /* Change to a single column */
         padding: 5% 5%; /* Adjust padding if necessary */
         width: 100%; /* Ensure the grid takes up full width */
-        height: 80rem;
+        height: 85rem;
     }
 
     .aboutUsPhoto {

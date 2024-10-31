@@ -19,7 +19,7 @@ const Qoutes = () => {
 
           <hr />
 
-          <form method="post" action="./send_email.php" className={styles.form}>
+          <form method="post" action="/send_email.php" className={styles.form}>
             <label for="name">Nombre:</label>
             <input
               className={styles.quotesInput}

@@ -1,18 +1,53 @@
 .footer {
-    background: #103a83;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: #253c7f;
+}
+
+.logoLink {
+    width: 15rem;
+    height: auto;
+}
+
+.column {
     height: 20rem;
     width: 100%;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6rem;
+    gap: .5rem;
     color:white;
+    position: relative;
+}
+
+.right {
+    left: 20%;
+    
+}
+
+.left {
+   right: 20%;
 }
 
 @media only screen and (max-width: 768px) {
     .footer {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .column{
+        position: static;
+        }
+
+    .logoLink {
+        width: 100%;
+        height: auto;
+    }
+
+    .navBrand:global(.navbar-brand){
+        margin-right: 0;
     }
 }

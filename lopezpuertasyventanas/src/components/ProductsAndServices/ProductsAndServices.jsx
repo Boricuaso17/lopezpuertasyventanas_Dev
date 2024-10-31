@@ -7,7 +7,11 @@ const ProductsAndServices = () => {
   return (
     <>
       <Header />
+      
+      <h2 className={styles.header}>Productos y Servicios</h2>
+
       <div className={styles.middle}>
+
         <div className={styles.items}>
           <ul className={styles.description}>
             <h2 className={styles.title}>Ventanas</h2>
@@ -32,6 +36,7 @@ const ProductsAndServices = () => {
             <li>Puertas Aluminio Heavy</li>
             <li>Puertas Aluminio Full Glass</li>
             <li>Puertas Folding</li>
+            <li>Puertas Pivot</li>
             <li>Puertas con Diseños a Escoger</li>
             <li>Tipos de colores a Escoger</li>
           </ul>
