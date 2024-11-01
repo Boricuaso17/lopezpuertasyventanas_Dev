@@ -147,7 +147,11 @@
     }
 
     .services {
-        width: 96%;
+        width: 90%;
+    }
+
+    .servicesTitle{
+        font-size: 1.4rem;
     }
     .mapContainer {
         width: 90%;
