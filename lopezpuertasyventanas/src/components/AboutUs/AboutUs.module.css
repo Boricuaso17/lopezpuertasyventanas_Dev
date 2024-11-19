@@ -37,6 +37,41 @@
     width: auto;
 }
 
+@media  ( max-width: 1755px) {
+
+        .middle {
+            height: 40rem;
+        }
+}
+
+@media ( max-width: 1375px ) {
+
+    .middle {
+        height: 50rem;
+        padding: 0 10%
+    }
+}
+
+@media ( max-width: 1290px ) {
+
+    .middle {
+        height: 50rem;
+    }
+}
+
+@media ( max-width: 970px) {
+    .middle {
+        padding: 0 5%;
+    }
+}
+
+@media ( max-width: 870px ) {
+    .middle {
+        height: 60rem;
+        padding: 2%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     
     .middle {

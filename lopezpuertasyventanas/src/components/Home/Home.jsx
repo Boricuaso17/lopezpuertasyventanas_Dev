@@ -84,19 +84,27 @@ const Home = () => {
 
       <div className={styles.middle3}>
         <div className={styles.items}>
-          <div className={styles.casa}></div>
+          <div className={styles.casa} 
+          style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/homePage/photoBtn4.jpg)`}}>
+          </div>
           <span>Ventanas</span>
         </div>
         <div className={styles.items}>
-          <div className={styles.casa}></div>
+          <div className={styles.casa}
+          style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/homePage/photoBtn3.jpg)`}}>
+          </div>
           <span>Puertas</span>
         </div>
         <div className={styles.items}>
-          <div className={styles.casa}></div>
+          <div className={styles.casa}
+          style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/homePage/photoBtn2.jpg)`}}>
+          </div>
           <span>Puertas de Closet</span>
         </div>
         <div className={styles.items}>
-          <div className={styles.casa}></div>
+          <div className={styles.casa}
+          style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/homePage/photoBtn1.jpg)`}}>
+          </div>
           <span>Puertas de Garaje</span>
         </div>
       </div>

@@ -5,6 +5,8 @@ import { LinkContainer } from "react-router-bootstrap";
 import logo from "../../static/images/logo.jpeg"; // Import local image
 
 export const Footer = () => {
+  const whatsappNum = "17878883302";
+
   return (
     <div className={styles.footer}>
       {/* Column 1 */}
@@ -24,13 +26,25 @@ export const Footer = () => {
       {/* Column 2 */}
       <div className={`${styles.column} ${styles.left}`}>
         <div>
-          <p className={`open-sans ${styles.telephone}`}>Rio Grande</p>
-          (787) 888-3302 &nbsp; / &nbsp; (787) 594-8194
+          <p>Lunes a Viernes: 8:00 am - 5:00 pm</p>
+          <p>Sábado: 8:00 am - 3:00 pm</p>
+          <p>(787) 888-3302 &nbsp; / &nbsp; (787) 594-8194</p>
+
+          {/* WhatsApp Button */}
+            <a
+              href={`https://wa.me/${whatsappNum}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.whatsappButton}
+            >
+              <i className="bi bi-whatsapp"></i> &nbsp; Contactanos en WhatsApp
+            </a>
         </div>
 
-        <hr style={{background:"white", width:"50%"}}/>
+        <hr style={{ background: "white", width: "50%" }} />
 
         <div>
+          <p className={`open-sans ${styles.telephone}`}>Rio Grande</p>
           <p>94HM+36X, Carretera 3, Río Grande, 00745</p>
         </div>
       </div>

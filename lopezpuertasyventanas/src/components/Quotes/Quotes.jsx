@@ -14,8 +14,13 @@ const Qoutes = () => {
           <hr />
 
           <h6 className={styles.city}>Rio Grande</h6>
-          <p className={styles.line}><h6>Teléfono:</h6>&nbsp; (787) 888-3302 &nbsp; / &nbsp; (787) 594-8194</p>
-          <p className={styles.line}><h6>Dirección:</h6>&nbsp; 94HM+36X, Carretera 3, Río Grande, 00745</p>
+          <p className={styles.line}>
+            <h6>Teléfono:</h6>&nbsp; (787) 888-3302 &nbsp; / &nbsp; (787)
+            594-8194
+          </p>
+          <p className={styles.line}>
+            <h6>Dirección:</h6>&nbsp; 94HM+36X, Carretera 3, Río Grande, 00745
+          </p>
 
           <hr />
 
@@ -56,6 +61,20 @@ const Qoutes = () => {
               required
             />
 
+              <div className={styles.checkbox} style={{ marginTop: '1rem' }}>
+                <input type="checkbox" name="ventanas" value="Ventanas" /> Ventanas
+              </div>
+              <div className={styles.checkbox}>
+                <input type="checkbox" name="puertas" value="Puertas" /> Puertas
+              </div>
+              <div className={styles.checkbox}>
+                <input type="checkbox" name="puertasDeCloset" value="Puertas de Closet" /> Puertas de Closet
+              </div>
+              <div className={styles.checkbox} style={{ marginBottom: '1rem' }}>
+                <input type="checkbox" name="puertasDeGaraje" value="Puertas de Garaje" /> Puertas de Garaje
+              </div>
+
+
             <label for="message">Mensaje / Comentarios:</label>
             <textarea
               className={styles.quotesTextarea}
@@ -63,7 +82,9 @@ const Qoutes = () => {
               id="message"
             ></textarea>
 
-            <button className={styles.btn} type="submit">Someter</button>
+            <button className={styles.btn} type="submit">
+              Someter
+            </button>
           </form>
         </div>
       </div>

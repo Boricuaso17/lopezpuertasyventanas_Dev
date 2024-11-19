@@ -5,8 +5,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lname = htmlspecialchars($_POST['lname']);
     $phone = htmlspecialchars($_POST['phone']);
     $email = htmlspecialchars($_POST['email']);
+    // Collect form data and handle optional checkboxes
+    $puertas = isset($_POST['puertas']) ? htmlspecialchars($_POST['puertas']) : '';
+    $ventanas = isset($_POST['ventanas']) ? htmlspecialchars($_POST['ventanas']) : '';
+    $puertasDeGaraje = isset($_POST['puertasDeGaraje']) ? htmlspecialchars($_POST['puertasDeGaraje']) : '';
+    $puertasDeCloset = isset($_POST['puertasDeCloset']) ? htmlspecialchars($_POST['puertasDeCloset']) : '';
+
     $message = htmlspecialchars($_POST['message']);
 
+    $services = [$puertas, $ventanas, $puertasDeGaraje, $puertasDeCloset];
     // Set the recipient email address
     $to = "joshuamercadorivera@yahoo.com"; /* lopezpuertaventas94@outlook.com */
 
@@ -15,7 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body = "Nombre: " . $name . " " . $lname . "\n";
     $body .= "Teléfono: " . $phone . "\n";
     $body .= "Email: " . $email . "\n\n";
-    $body .= "Mensaje / Comentarios:\n" . $message . "\n";
+    $body .= "Servicio de Interés:\n";
+
+    // Loop through services to add them to the body if they are not empty
+    foreach ($services as $service) {
+        if (strlen($service) > 0) {  // Check if the service is not empty
+            $body .= "\t" . $service . "\n";
+        }
+    }
+      
+    $body .= "Mensaje / Comentarios:\n" . "\t" .$message . "\n";
 
     // Set email headers
     $headers = "From: " . $email . "\r\n";
